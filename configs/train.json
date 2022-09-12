@@ -1,0 +1,45 @@
+{
+  "batch_size"  : 8,
+  "num_workers" : 8,
+  "model"       : "wnet",
+
+  "train_config": {
+    "optimizer"         : "ranger",
+    "schedule"          : "flat",
+    "steps"             : 400,
+    "per_batch_schedule": false,
+    "falloff"           : 0.9872,
+    "lr"                : 0.0023,
+    "final_lr"          : 0.0003
+  },
+
+  "loss_config": {
+    "spatial_factor": 0.3,
+    "step_weights"  : [ 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0 ]
+  },
+
+  "model_config": {
+    "use_bn": false,
+    "activation": "relu",
+    "leaky_slope": 0.1,
+    "init": "default",
+    "quantize": false,
+    "num_bits": 4,
+    "pooled_skip": false,
+    "linear_kernel": false,
+    "encoder_stages": [
+      [ 32, 2 ],
+      [ 64, 2 ],
+      [ 96, 2 ],
+      [ 128, 2 ],
+      [ 160, 2 ]
+    ],
+
+    "decoder_stages": [
+      [ 32, 2 ],
+      [ 64, 1 ],
+      [ 96, 1 ],
+      [ 128, 1 ]
+    ]
+  }
+}
