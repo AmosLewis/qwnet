@@ -1,9 +1,7 @@
--f https://download.pytorch.org/whl/nightly/cpu/torch_nightly.html
---pre
-torch
+tqdm
+tensorboard
 
 numpy
-torchvision
 
 # Build requirements.
 pybind11
