@@ -12,9 +12,10 @@ See the License for the specific language governing permissions and limitations 
 https://creativecoding.soe.ucsc.edu/QW-Net/
 
 ## Requirements
-Python  - 3.6.0
-Pytorch - 1.7.0
-OpenEXR - 1.3.2
+Python  - 3.10
+Pytorch with cuda
+OpenEXR 
+see env.txt
 
 ## Single GPU Training
 
