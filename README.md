@@ -20,8 +20,13 @@ python train.py --val_dir VAL_DIR --config configs/train.json --session_name MY_
 
 The default checkpoint directory is ../checkpoints/session_name
 
+python train.py --val_dir ./val_dir/ --config configs/train.json --session_name MY_SESSION --image_dir ./image_dir/
+
+
 ## Single GPU Inference (Windows Only)
 
 python predict.py --config config/train.json --session_name MY_SESSION LPMSKPAA_Dataset/data/Infiltrator/180_320
+
+python predict.py  --config configs/train.json --session_name MY_SESSION --image_dir ./image_dir/     
 
 
